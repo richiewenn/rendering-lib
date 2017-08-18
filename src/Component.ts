@@ -1,17 +1,13 @@
 import Vasific from './Vasific'
 
-type State = {
-
-}
-
-export default class Component<P, State> {
-  private state: State = {};
+export default class Component<P> {
+  private state: Object = {};
 
   constructor(private props: P) {
     this.props = props || {};
   }
 
-  render(): String {
+  render(): string {
     return '';
   }
 
