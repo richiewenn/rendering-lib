@@ -1,3 +1,3 @@
 export default class Store {
-  static state: any;
+  static state: any = {};
 }

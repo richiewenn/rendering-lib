@@ -1,10 +1,9 @@
 import Vasific from './Vasific'
 
 export default class Component<P, S> {
-  protected state: Object = {};
+  protected state: S = {} as S;
 
-  constructor(private props?: any) {
-    this.props = props || {};
+  constructor(private props: P = {} as P) {
   }
 
   render(): string {
@@ -12,7 +11,7 @@ export default class Component<P, S> {
   }
 
   setState(partOfState: Object): void {
-    this.state = {...this.state, ...partOfState};  // Object.assign
+    this.state = {...this.state as Object, ...partOfState} as S;  // Object.assign
     Vasific.render();
   }
 }
