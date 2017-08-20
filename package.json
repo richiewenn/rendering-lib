@@ -5,13 +5,20 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "run": "ts-node ./src/index.ts",
-    "prepublishOnly": "tsc -p ./ --outDir dist/ -d"
+    "prepublishOnly": "tsc -p ./ --outDir dist/ -d",
+    "test": "mocha -r ts-node/register tests/**/*.test.ts"
   },
   "author": "Richard Vašek",
   "license": "MIT",
   "devDependencies": {
+    "@types/chai": "^4.0.3",
+    "@types/mocha": "^2.2.41",
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0",
     "ts-node": "^3.3.0",
     "typescript": "^2.4.2"
   },
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ]
 }
