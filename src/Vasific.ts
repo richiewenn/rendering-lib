@@ -1,10 +1,10 @@
 import Component from "./Component";
 
 export default class Vasific {
-  static app: Component;
+  static app: Component<any, any>;
   static rootElement: Element | null;
 
-  static render(app?: Component, renderSelector?: string): void {
+  static render(app?: Component<any, any>, renderSelector?: string): void {
     if(app && renderSelector) {
       Vasific.app = app;
       Vasific.rootElement = document.querySelector(renderSelector);

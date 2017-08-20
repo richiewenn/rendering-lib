@@ -1,7 +1,7 @@
 import Vasific from './Vasific'
 
-export default class Component {
-  private state: Object = {};
+export default class Component<P, S> {
+  protected state: Object = {};
 
   constructor(private props?: any) {
     this.props = props || {};
